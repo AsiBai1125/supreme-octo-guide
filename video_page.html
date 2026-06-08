@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配手机屏幕 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短视频界面</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:#000;color:#fff;font-family:微软雅黑;}
+        /* 整体容器 手机竖屏 */
+        .video-box{width:100vw;height:100vh;position:relative;overflow:hidden;}
+        /* 视频主体区域 */
+        .video-main{width:100%;height:100%;background:#333;display:flex;align-items:center;justify-content:center;font-size:24px;opacity:0.8;}
+        /* 右侧功能按钮栏 */
+        .btn-group{position:absolute;right:15px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:25px;align-items:center;}
+        .btn{text-align:center;}
+        .btn-icon{font-size:28px;margin-bottom:5px;}
+        .btn-text{font-size:12px;}
+        /* 底部评论区 */
+        .comment-area{position:absolute;left:0;bottom:0;width:100%;padding:20px 15px 80px;background:linear-gradient(transparent,rgba(0,0,0,0.8));}
+        .comment-item{margin-bottom:12px;font-size:14px;line-height:1.5;}
+        .name{color:#ffd166;margin-right:8px;}
+    </style>
+</head>
+<body>
+    <div class="video-box">
+        <!-- 视频画面区域 -->
+        <div class="video-main">
+            视频播放区域
+        </div>
+
+        <!-- 右侧四个按钮：点赞、评论、转发、举报 -->
+        <div class="btn-group">
+            <div class="btn">
+                <div class="btn-icon">❤️</div>
+                <div class="btn-text">点赞</div>
+            </div>
+            <div class="btn">
+                <div class="btn-icon">💬</div>
+                <div class="btn-text">评论</div>
+            </div>
+            <div class="btn">
+                <div class="btn-icon">↪️</div>
+                <div class="btn-text">转发</div>
+            </div>
+            <div class="btn">
+                <div class="btn-icon">🚫</div>
+                <div class="btn-text">举报</div>
+            </div>
+        </div>
+
+        <!-- 下方乐子人/串子风格评论区 -->
+        <div class="comment-area">
+            <div class="comment-item"><span class="name">吃瓜路人</span>：视频掐头去尾，懂的都懂，先蹲一手官方消息</div>
+            <div class="comment-item"><span class="name">快乐摆烂人</span>：评论区比视频有意思系列，今天乐到了😂</div>
+            <div class="comment-item"><span class="name">中立围观者</span>：不站队，单纯路过吃瓜</div>
+            <div class="comment-item"><span class="name">网络懂哥</span>：一眼看出剪辑痕迹，典型流量套路罢了</div>
+            <div class="comment-item"><span class="name">摸鱼选手</span>：前排占位，坐等后续反转</div>
+        </div>
+    </div>
+</body>
+</html>
